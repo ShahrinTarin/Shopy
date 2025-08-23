@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Shopy - E-Commerce Web App
 
-## Getting Started
+[Live Site](YOUR_LIVE_SITE_LINK) | [GitHub Repository](YOUR_GITHUB_LINK)
 
-First, run the development server:
+---
 
+## Project Description
+Shopy is a modern e-commerce web application built with Next.js, Tailwind CSS, and NextAuth.js for authentication. Users can browse products, register/login, and authenticated users can add new products via a secure dashboard. The app features a sleek, animated UI with glassmorphism design and responsive mobile-first layout.
+
+---
+
+## Features
+- User authentication with NextAuth.js (credentials & Google OAuth)
+- Add new products via secure dashboard (authenticated users only)
+- Animated and gradient-based UI (glassmorphism)
+- Responsive design for mobile and desktop
+- Loading spinners for better UX on login and form submission
+
+---
+
+## Setup & Installation
+
+### Prerequisites
+- Node.js v18+
+- npm or yarn
+
+### Installation
+1. Clone the repository:
 ```bash
+git clone YOUR_GITHUB_LINK
+cd shopy
+
+npm install
+# or
+yarn install
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 API Endpoints Overview
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+| Method | Route                        | Description                                      |
+|--------|------------------------------|-------------------------------------------------|
+| GET    | `/products`                  | Get all products                                |
+| GET    | `/products/:id`              | Get a single product by ID                      |
+| POST   | `/api/productsave`           | Add a new product (Auth required)              |
+| POST   | `/api/auth/signup`           | Register a new user                             |
+| POST   | `/api/auth/login`            | Login user with credentials                     |
+| POST   | `/api/auth/logout`           | Logout user                                     |
+| GET    | `/api/auth/session`          | Get current user session                        |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
