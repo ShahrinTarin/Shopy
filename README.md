@@ -1,7 +1,6 @@
 # Shopy - E-Commerce Web App
 
-[Live Site](YOUR_LIVE_SITE_LINK) | [GitHub Repository](YOUR_GITHUB_LINK)
-
+[Live Site](https://shopy-sigma.vercel.app) 
 ---
 
 ## Project Description
