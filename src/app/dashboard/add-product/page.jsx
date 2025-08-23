@@ -2,7 +2,7 @@
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-
+import toast, { Toaster } from "react-hot-toast";
 export default function AddProductPage() {
   const { data: session, status } = useSession();
   const router = useRouter();
@@ -35,14 +35,14 @@ export default function AddProductPage() {
       });
 
       if (res.ok) {
-        alert("Product added!");
+         toast.success("Product added!");
         setProduct({ name: "", price: "", description: "" });
       } else {
-        alert("Failed to add product.");
+        toast.error("Failed to add product.");
       }
     } catch (err) {
       console.error(err);
-      alert("Something went wrong!");
+      toast.error("Something went wrong!");
     } finally {
       setLoading(false);
     }
@@ -137,7 +137,7 @@ export default function AddProductPage() {
           <button
             type="submit"
             disabled={loading}
-            className="bg-[#1b9c85] hover:bg-[#159872] text-white py-3 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3"
+            className="bg-[#1b9c85] cursor-pointer hover:bg-[#159872] text-white py-3 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3"
           >
             {loading && (
               <span className="w-5 h-5 border-4 border-white border-t-transparent rounded-full animate-spin"></span>
