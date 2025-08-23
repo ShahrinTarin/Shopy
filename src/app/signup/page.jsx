@@ -116,7 +116,7 @@ const SignupPage = () => {
           <button
             type="submit"
             disabled={loading}
-            className="bg-[#1b9c85] hover:bg-[#159872] text-white py-3 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
+            className="bg-[#1b9c85] cursor-pointer hover:bg-[#159872] text-white py-3 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
           >
             {loading ? "Signing up..." : "Sign Up"}
           </button>
